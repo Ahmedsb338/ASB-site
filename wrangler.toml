@@ -1,0 +1,4 @@
+# Cloudflare Pages project settings (not deployed by this repo's tooling).
+name = "asb-workforce-web"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-01-01"

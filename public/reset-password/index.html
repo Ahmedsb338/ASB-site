@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="referrer" content="no-referrer"><meta name="robots" content="noindex">
+<title>ASB Workforce – Set password</title>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/config.js"></script><script src="/assets/auth.js" defer></script><script src="/assets/pages.js" defer></script>
+</head><body data-page="reset">
+<div class="wrap">
+  <div class="bar"><a class="brand" href="/"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 11c0 3-1 5-3 7M12 7a4 4 0 0 1 4 4c0 2.5-.4 4.5-1.5 6.5M8 8.5A5 5 0 0 1 12 6M6 12a6 6 0 0 1 .7-2.8M17.5 6A8 8 0 0 1 20 12c0 2-.3 3.5-1 5"/></svg></span>ASB Workforce</a><button class="lang" id="lang" type="button" aria-label="Language"></button></div>
+  <h1 data-t="rH"></h1><p data-t="rP"></p>
+  <div class="card">
+    <div id="status" class="msg" role="status" aria-live="polite"></div>
+    <form id="form" autocomplete="off" novalidate>
+      <label><span data-t="pw"></span><input id="pw" type="password" autocomplete="new-password" minlength="8" required></label>
+      <label><span data-t="pw2"></span><input id="pw2" type="password" autocomplete="new-password" required></label>
+      <p class="small" data-t="hint"></p>
+      <button class="btn" id="go" type="submit" data-t="save"></button>
+    </form>
+    <a class="btn ghost" id="inapp" href="asbworkforce://" hidden data-t="inApp"></a>
+  </div>
+</div></body></html>
