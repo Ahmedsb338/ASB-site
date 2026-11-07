@@ -47,3 +47,35 @@ test('association files: nothing invented, strict validation', () => {
   assert.throws(() => aasa(['nope']));
   assert.equal(aasa(['ABCDE12345.com.asb.workforce.dev']).webcredentials.apps[0], 'ABCDE12345.com.asb.workforce.dev');
 });
+
+test('download supports platform-scoped and legacy metadata', () => {
+  const now = new Date('2026-11-08T00:00:00Z');
+
+  assert.equal(A.usableBuild({
+    android: {
+      url: 'https://expo.dev/artifacts/new.apk',
+      expiresAt: '2026-11-20T00:00:00Z'
+    },
+    ios: null
+  }, now), true);
+
+  assert.equal(A.usableBuild({
+    android: {
+      url: 'https://expo.dev/artifacts/expired.apk',
+      expiresAt: '2026-11-01T00:00:00Z'
+    },
+    ios: null
+  }, now), false);
+
+  assert.equal(A.usableBuild({
+    android: {
+      url: 'https://evil.example/app.apk'
+    },
+    ios: null
+  }, now), false);
+
+  assert.equal(A.usableBuild({
+    url: 'https://expo.dev/artifacts/legacy.apk',
+    expiresAt: '2026-11-20T00:00:00Z'
+  }, now), true);
+});

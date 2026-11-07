@@ -33,9 +33,10 @@
     return null;
   }
 
-  /** Only offer APK links hosted by Expo that have not expired. */
+  /** Accept current platform-scoped and legacy APK metadata; Expo links only. */
   function usableBuild(j, now) {
-    return !!(j && typeof j.url === 'string' && /^https:\/\/expo\.dev\//.test(j.url) && (!j.expiresAt || new Date(j.expiresAt) > (now || new Date())));
+    var b = j && (j.android || j);
+    return !!(b && typeof b.url === 'string' && /^https:\/\/expo\.dev\//.test(b.url) && (!b.expiresAt || new Date(b.expiresAt) > (now || new Date())));
   }
 
   var api = { parseParams: parseParams, classify: classify, passwordProblem: passwordProblem, usableBuild: usableBuild };

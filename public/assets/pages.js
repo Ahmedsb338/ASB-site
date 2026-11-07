@@ -128,7 +128,7 @@
     };
     setText();
     fetch('/latest.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (j) { if (A.usableBuild(j)) build = j; state.render(); }).catch(function () { state.render(); });
+      .then(function (j) { if (A.usableBuild(j)) build = j.android || j; state.render(); }).catch(function () { state.render(); });
   }
 
   if ($('lang')) $('lang').addEventListener('click', function () { lang = lang === 'ar' ? 'en' : 'ar'; try { localStorage.setItem('asb-landing-lang', lang); } catch (e) { /* ignore */ } setText(); });

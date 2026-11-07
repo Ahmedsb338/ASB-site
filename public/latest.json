@@ -1,9 +1,11 @@
 {
-  "version": "0.1.0",
-  "buildId": "0ab0e08c-3ecc-41a1-a9ea-0ed87f5c5942",
-  "profile": "preview",
-  "createdAt": "2026-11-06T11:35:20.760Z",
-  "expiresAt": "2026-11-20T11:35:20.799Z",
-  "url": "https://expo.dev/artifacts/eas/Pdz6IEzGPORmIi90TDCo2L9T82Qrcx0WODbFf6PKUOw.apk",
-  "page": "https://expo.dev/accounts/asb100100/projects/asb-workforce/builds/0ab0e08c-3ecc-41a1-a9ea-0ed87f5c5942"
+  "android": {
+    "version": "0.1.0",
+    "buildId": "e2014297-db2e-4f82-9246-763a502f7ba8",
+    "profile": "preview",
+    "createdAt": "2026-11-07T13:34:36.664Z",
+    "expiresAt": "2026-11-21T13:34:36.727Z",
+    "url": "https://expo.dev/artifacts/eas/ii7yHrBYWrNK0ZDkWIYYlShTQbpeTSRTFloRZgnZK2s.apk"
+  },
+  "ios": null
 }
