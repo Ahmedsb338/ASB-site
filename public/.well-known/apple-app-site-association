@@ -1,4 +1,4 @@
 {
-  "applinks": { "details": [] },
-  "webcredentials": { "apps": [] }
+  "applinks": { "details": [ { "appIDs": ["REPLACE_TEAMID.com.asb.workforce"], "components": [ { "/": "/accept-invite*" }, { "/": "/reset-password*" } ] } ] },
+  "webcredentials": { "apps": ["REPLACE_TEAMID.com.asb.workforce"] }
 }
