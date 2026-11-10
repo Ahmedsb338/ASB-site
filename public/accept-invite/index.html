@@ -1,0 +1,13 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>ASB Workforce</title>
+<style>body{font-family:system-ui,sans-serif;background:#f5f7fb;color:#0f172a;margin:0;padding:24px}main{max-width:480px;margin:0 auto;display:grid;gap:14px}
+h1{color:#2d59ee;margin:0}a.btn{display:block;text-align:center;background:#2d59ee;color:#fff;padding:14px;border-radius:12px;text-decoration:none;font-weight:700}
+code{display:block;word-break:break-all;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:10px;direction:ltr;text-align:left}</style></head>
+<body><main><h1>ASB Workforce</h1><h2>قبول الدعوة · Accept invitation</h2>
+<p id="msg">افتح التطبيق للمتابعة. إن لم يفتح، انسخ الكود أدناه والصقه في التطبيق. / Open the app to continue. If it does not open, copy the code below into the app.</p>
+<a id="open" class="btn" href="#">فتح التطبيق · Open the app</a><code id="code"></code></main>
+<script>
+(function(){var t=new URLSearchParams(location.search).get('token')||'';
+var ok=/^[0-9a-f]{64}$/.test(t);var code=document.getElementById('code'),open=document.getElementById('open');
+if(!ok){code.textContent='';open.style.display='none';document.getElementById('msg').textContent='الرابط غير صالح · Invalid link';return;}
+code.textContent=t;open.href='asbworkforce://auth/accept-invite?token='+encodeURIComponent(t);})();
+</script></body></html>
